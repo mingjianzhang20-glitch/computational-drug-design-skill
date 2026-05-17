@@ -1,0 +1,12 @@
+entities:
+  # Target protein extracted from AlphaFold3 predicted structure
+  - file:
+      path: ndufa9.cif
+      include:
+        - chain:
+            id: A
+
+  # Peptide binder to design (length 5-10 covers 5-mer sliding window)
+  - protein:
+      id: B
+      sequence: 5..10
