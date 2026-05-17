@@ -121,3 +121,51 @@ Contributions are welcome. Please open an issue or submit a pull request.
 ## License
 
 MIT
+---
+
+## Dependency Installation Links
+
+These tools must be installed manually before using this skill. Below are the official installation resources for each:
+
+### Boltz2
+- GitHub: https://github.com/jwohlwend/boltz
+- Checkpoint download: https://huggingface.co/boltz-community/boltz-2
+- Install: `pip install boltz`
+- After install, download the affinity checkpoint and place at `~/.boltz/boltz2_aff.ckpt`
+
+### BoltzGen
+- GitHub: https://github.com/HannesStark/boltzgen
+- Install: `pip install boltzgen`
+- Or from source: `git clone https://github.com/HannesStark/boltzgen && pip install -e .`
+- ⚠️ Versions are pinned for RTX 4090 (Ada Lovelace). Check releases page for compatible version.
+
+### AlphaFold3
+- GitHub: https://github.com/google-deepmind/alphafold3
+- ⚠️ Requires application for model weights: https://forms.gle/svvpY4u2jsHEwWYS6
+- Follow the official installation guide carefully — GPU memory requirements are significant.
+
+### PyMOL
+- Open-source version: https://github.com/schrodinger/pymol-open-source
+- Install via conda: `conda install -c conda-forge pymol-open-source`
+- Or via pip: `pip install pymol`
+
+### RDKit
+- Official docs: https://www.rdkit.org/docs/Install.html
+- Install via conda (recommended): `conda install -c conda-forge rdkit`
+
+### Python dependencies (after installing above tools)
+- matplotlib: `pip install matplotlib`
+- python-docx: `pip install python-docx`
+- pandas: `pip install pandas`
+
+---
+
+## Recommended Setup Order
+
+1. Set up conda environment with Python ≥ 3.9
+2. Install RDKit via conda
+3. Install PyMOL via conda
+4. Install BoltzGen (check RTX 4090 compatible version)
+5. Install Boltz2 and download `boltz2_aff.ckpt` checkpoint
+6. Apply for AlphaFold3 model weights
+7. Clone this skill and follow SKILL.md
